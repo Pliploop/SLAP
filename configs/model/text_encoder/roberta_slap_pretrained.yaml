@@ -1,0 +1,5 @@
+defaults:
+  - roberta_slap
+
+encoder:
+  load_pretrained: true

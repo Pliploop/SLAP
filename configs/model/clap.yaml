@@ -1,0 +1,9 @@
+defaults:
+  - default
+
+_target_: src.models.clap.CLAP
+
+loss_fn:
+  _target_: src.utils.losses.CLAPLoss
+  temperature: 0.1
+  trainable: true

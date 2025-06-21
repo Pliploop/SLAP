@@ -1,0 +1,20 @@
+dir: ${paths.log_dir}
+exclude:
+  - callbacks.*
+  - data.num_workers
+  - data.dataloader_kwargs.pin_memory
+  - data.dataloader_kwargs.prefetch_factor
+  - data.dataloader.persistent_workers
+  - extras.*
+  - logger.*
+  - model.compile
+  - paths.*
+  - trainer.accelerator
+  - trainer.devices
+  - trainer.check_val_every_n_epoch
+  - trainer.default_root_dir
+  - trainer.min_epochs
+  - trainer.num_sanity_val_steps
+  - trainer.log_every_n_steps
+  - resume
+git_save: false

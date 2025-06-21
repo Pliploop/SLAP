@@ -1,0 +1,16 @@
+defaults:
+  - default
+
+encoder:
+  _target_: src.networks.text.bert.HuggingFaceTextEncoder
+  model_name: roberta-base
+  load_pretrained: false
+
+projector:
+  _target_: src.networks.mlp.MLP
+  dims:
+    - 768
+    - ${model.embed_dim}
+    - ${model.embed_dim}
+  activation: true
+  normalization: true

@@ -1,0 +1,14 @@
+defaults:
+  - default
+
+_target_: src.models.slap.SLAP
+
+loss_fn:
+  _target_: src.utils.losses.BYOLLoss
+
+ma_callback:
+  _target_: src.callbacks.ma_update.MAWeightUpdate
+  every_n_steps: ${trainer.accumulate_grad_batches}
+  initial_tau: 0.995
+  final_tau: 0.995
+  update_method: 'lin'

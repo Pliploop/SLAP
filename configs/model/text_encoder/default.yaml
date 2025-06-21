@@ -1,0 +1,9 @@
+  _target_: src.networks.siamese_arm.SiameseArm
+  
+  encoder: ???
+  projector: ???
+  transform: null
+  
+  freeze_encoder: false
+  normalize_representations: false
+  normalize_projections: true

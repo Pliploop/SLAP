@@ -1,0 +1,55 @@
+.idea
+logs
+/pretrained/*.ckpt
+pretrained/*.pt
+**/__pycache__
+
+# private configs
+# configs/cluster
+# configs/data/privatecaps.yaml
+# configs/paths/al1*.yaml
+# configs/paths/jul1*.yaml
+
+sagemaker_
+Makefile
+train_sagemaker.py
+.secrets
+*.ipynb
+media/plotly
+# readme_ 
+# muscall
+muscall_
+# local backups
+*.bak
+
+# Ignore experiment results, logs, and checkpoints
+logs/
+evar/results/
+evar/temp/
+# figs/
+
+# Ignore pretrained model weights and large files
+pretrained/*.ckpt
+pretrained/*.pth
+evar/**/*.ckpt
+evar/**/*.pth
+pretrained/U_25000.json
+pretrained/.DS_Store
+
+# Ignore sagemaker and cloud-specific code
+train_sagemaker.py
+sagemaker_/
+
+# Ignore notebooks and OS-specific files
+*.ipynb
+.DS_Store
+.project-root
+
+# Ignore sensitive or user-specific configs
+configs/paths/jul1_bluck.yaml
+configs/paths/jul1.yaml
+configs/paths/al1.yaml
+
+# Ignore pycache and other Python artifacts
+**/__pycache__/
+*.pyc

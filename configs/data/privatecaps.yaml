@@ -1,0 +1,24 @@
+defaults:
+  - default
+
+dataset_kwargs:
+  csv_path:
+    - ${paths.data_dir}/upmm_captions_spectrograms.csv
+    - ${paths.data_dir}/musiccaps_spectrograms.csv
+    - ${paths.data_dir}/song_describer_spectrograms.csv
+  num_frames: 1024
+  root_path: ${paths.data_dir}
+
+dataloader_kwargs:
+  batch_size: 256
+  num_workers: ${data.num_workers}
+  pin_memory: true
+  persistent_workers: true
+  devices: ${trainer.devices}
+
+norm_stats:
+  - -6.024
+  - 4.162
+
+local_dir: false
+num_workers: 32

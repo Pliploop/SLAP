@@ -1,0 +1,5 @@
+defaults:
+  - htsat_slap
+
+# ideally we should use checkpoint_path from HTSATSwinTransformer class, not from SiameseArm class
+checkpoint_path: ${paths.pretrained}/htsat_clap.ckpt

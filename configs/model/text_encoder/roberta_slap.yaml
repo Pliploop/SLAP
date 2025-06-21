@@ -1,0 +1,12 @@
+defaults:
+  - roberta
+
+transform:
+  _target_: src.networks.mlp.MLP
+  dims:
+    - ${model.embed_dim}
+    - 4096
+    - ${model.embed_dim}
+  activation: true
+  normalization: false
+  dropout: 0.1

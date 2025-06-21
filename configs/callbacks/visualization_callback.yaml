@@ -1,0 +1,6 @@
+# https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.callbacks.ModelCheckpoint.html
+
+visualization_callback:
+  _target_: src.callbacks.umap.UMAPVisualization
+  every_n_epochs: 5 # number of epochs between checkpoints
+  n_samples: 2000

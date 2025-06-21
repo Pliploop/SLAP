@@ -1,0 +1,24 @@
+_target_: src.data.audio_csv.AudioCSVDataModule
+
+tokenizer:
+  _target_: src.tokenizer.base.HuggingFaceTokenizer
+  max_sequence_length: 128
+  truncation: "longest_first"
+  padding: "longest"
+  return_special_tokens_mask: false
+  return_attention_mask: true
+
+dataset_kwargs:
+  csv_path: ???
+  num_frames: 1024
+  root_path: ${paths.data_dir}
+
+dataloader_kwargs:
+  batch_size: 256
+  num_workers: ${data.num_workers}
+  pin_memory: false
+  devices: ${trainer.devices}
+
+norm_stats: ???
+
+num_workers: 6

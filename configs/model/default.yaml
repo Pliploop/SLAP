@@ -1,0 +1,23 @@
+_target_: ???
+
+audio_encoder: ${model.audio_encoder}
+
+text_encoder: ${model.text_encoder}
+
+loss_fn: ???
+
+optimizer:
+  _target_: torch.optim.Adam
+  _partial_: true
+  lr: 1e-4
+  weight_decay: 1e-6
+
+scheduler:
+  _target_: src.utils.scheduler.LinearWarmupCosineAnnealingLR
+  _partial_: true
+  warmup_epochs: 10
+
+embed_dim: 512
+
+# compile model for faster training with pytorch 2.0
+compile: false

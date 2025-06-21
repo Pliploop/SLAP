@@ -1,0 +1,15 @@
+## override defaults to None
+_target_: src.models.muscall.models.muscall.MusCALL
+
+weight_file: null
+config_file: /homes/jpmg86/nCLAP/muscall_/configs/models/muscall.yaml
+tokenizer: cliptokenizer
+
+loss_fn:
+  _target_: src.utils.losses.CLAPLoss
+  temperature: 0.1
+  trainable: true
+
+audio_encoder: null
+text_encoder: null
+embed_dim: null

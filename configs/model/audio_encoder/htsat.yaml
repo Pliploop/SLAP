@@ -1,0 +1,21 @@
+defaults:
+  - default
+
+encoder:
+  _target_: src.networks.audio.htsat.HTSATSwinTransformer
+  spec_size: 256
+  mel_bins: 64
+  spec_window_size: 1024
+  hop_size: 480
+  patch_size: 16
+  embed_dim: 128
+  depths:
+    - 2
+    - 2
+    - 12
+    - 2
+  num_heads:
+    - 4
+    - 8
+    - 16
+    - 32

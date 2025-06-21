@@ -1,0 +1,21 @@
+_target_: src.networks.siamese_arm.SiameseArm
+
+encoder: ???
+
+projector:
+  _target_: src.networks.mlp.MLP
+  dims:
+    - 1024
+    - ${model.embed_dim}
+    - ${model.embed_dim}
+  activation: true
+  normalization: true
+
+transform: null
+
+freeze_encoder: false
+
+normalize_representations: false
+normalize_projections: true
+
+checkpoint_path: null

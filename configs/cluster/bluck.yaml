@@ -1,0 +1,25 @@
+# @package _global_
+
+defaults:
+  - override /paths: default
+  - override /trainer: gpu
+
+# automatically set the number of workers to the number of CPUs reserved by Bob Slurm
+data:
+  num_workers: 32
+  local_dir: false
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+paths:
+  pretrained: ./pretrained
+
+trainer:
+  accelerator: gpu
+  precision: bf16-mixed
+  strategy: ddp
+  devices:
+    - 0
+    - 1
+  num_nodes: 1
+  sync_batchnorm: True

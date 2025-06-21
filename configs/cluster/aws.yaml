@@ -1,0 +1,32 @@
+# @package _global_
+
+defaults:
+  - override /paths: default
+  - override /trainer: gpu
+
+# on the cluster we do not use rich
+callbacks:
+  progress_bar:
+    _target_: lightning.pytorch.callbacks.TQDMProgressBar
+
+# automatically set the number of workers to the number of CPUs reserved by Bob Slurm
+data:
+  num_workers: 32
+  local_dir: false
+
+# all parameters below will be merged with parameters from default configurations set above
+# this allows you to overwrite only specified parameters
+paths:
+  pretrained: ./pretrained
+
+trainer:
+  accelerator: gpu
+  precision: bf16-mixed
+  strategy: ddp
+  devices:
+    - 0
+    - 1
+    - 2
+    - 3
+  num_nodes: 1
+  sync_batchnorm: True

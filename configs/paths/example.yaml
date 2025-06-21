@@ -1,0 +1,6 @@
+defaults:
+  - default
+
+data_dir: /path/to/your/data
+ckpt_dir: /path/to/your/checkpoints
+log_dir: /path/to/your/logs 
