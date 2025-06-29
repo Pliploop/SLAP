@@ -9,7 +9,7 @@
 <sup>*</sup>Equal contribution, correspondence to j.guinot@qmul.ac.uk
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![arXiv](https://img.shields.io/badge/arXiv-xxxx.xxxxx-<COLOR>.svg)](https://arxiv.org/abs/xxxx.xxxxx)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.17815-<COLOR>.svg)](https://arxiv.org/abs/2506.17815)
 
 <p align="center">
   <img src="readme_/figs/slap-ab-1.png" alt="SLAP Architecture" width="600"/>
@@ -188,7 +188,13 @@ The following UMAP visualizations illustrate how SLAP better aligns audio and te
 If you use this code, please cite:
 
 ```bibtex
-citation key coming soon
+@inproceedings{SLAP,
+    author = {Guinot, Julien and Riou, Alain and Quinton, Elio and Fazekas, György},
+    booktitle = {Proceedings of the 26th International Society for Music Information Retrieval Conference, ISMIR 2025},
+    publisher = {International Society for Music Information Retrieval},
+    title = {SLAP: Siamese Language-Audio Pretraining Without Negative Samples for Music Understanding},
+    year = {2025}
+}
 ```
 
 ---
@@ -199,6 +205,6 @@ This repository is released under the MIT License. See [LICENSE](LICENSE) for de
 
 ## Acknowledgements
 - Some code adapted from [CLAP](https://github.com/LAION-AI/CLAP) and [MusCALL](https://github.com/ilaria-manco/muscall).
-- Built with [PyTorch Lightning](https://lightning.ai/) and [Hydra](https://hydra.cc/).
+- Built with [PyTorch Lightning](https://lightning.ai/) and [Hydra](https://hydra.cc/), following [this template](https://github.com/ashleve/lightning-hydra-template).
 
 For questions, contact: j.guinot@qmul.ac.uk
