@@ -136,6 +136,7 @@ class AudioCSVDataset(Dataset):
         if sr != target_sr:
             y = F.resample(y, sr, target_sr)
             sr = target_sr
+            n_samples = y.shape[0]
             
         # pad or crop
         if n_samples < target_frames:
