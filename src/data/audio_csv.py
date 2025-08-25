@@ -82,8 +82,7 @@ class AudioCSVDataset(Dataset):
             idx (int): Index of the track to load
 
         Returns:
-            torch.Tensor: stems or mix, depending on `self.mix_tracks`,
-                shape (num_frames) if `self.mix_tracks` and (num_stems, num_frames) otherwise
+            torch.Tensor: output spectrogram (or audio if self.audio)
         """
         npy_path, caption = tuple(self.df.iloc[idx])
 
