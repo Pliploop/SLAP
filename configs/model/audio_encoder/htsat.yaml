@@ -7,7 +7,7 @@ encoder:
   mel_bins: 64
   spec_window_size: 1024
   hop_size: 480
-  patch_size: 16
+  patch_size: 4
   embed_dim: 128
   depths:
     - 2
