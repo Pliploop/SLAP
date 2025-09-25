@@ -201,7 +201,7 @@ If you use this code, please cite:
 
 ## License
 
-This repository is released under the MIT License. See [LICENSE](LICENSE) for details.
+This repository is released under the GNUv3 License. See [LICENSE](LICENSE) for details.
 
 ## Acknowledgements
 - Some code adapted from [CLAP](https://github.com/LAION-AI/CLAP) and [MusCALL](https://github.com/ilaria-manco/muscall).
